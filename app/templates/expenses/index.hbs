@@ -1,0 +1,29 @@
+<table>
+    <thead>
+        <tr>
+            <td>Date</td>
+            <td>Amount</td>
+            <td>Title</td>
+            <td>Actions</td>
+        </tr>
+    </thead>
+    <tbody>
+
+    {{#each model}}
+        <tr>
+            <td>{{date-helper date}}</td>
+            <td>{{amount}} €</td>
+            <td>{{title}}</td>
+            <td width="250">
+                <ul class="button-group">
+                    <li><button class="button tiny" {{action 'deleteExpense' this}}>Delete</button></li>
+                    <li><button class="button tiny" {{action 'edit' this}}>Edit</button></li>
+                </ul>
+            </td>
+        </tr>
+    {{/each}}
+
+    <tr><td colspan="3"></td><td><strong>Total: <span class="right">{{total}} €</span></strong></td></tr>
+
+    </tbody>
+</table>

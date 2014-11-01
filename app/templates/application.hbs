@@ -1,3 +1,25 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <nav class="tab-bar">
+      <section class="left-small">
+        <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
 
-{{outlet}}
+      <section class="middle tab-bar-section">
+        <h1 class="title">Budgetize</h1>
+      </section>
+    </nav>
+
+    <aside class="left-off-canvas-menu">
+      <ul class="off-canvas-list">
+        <li>{{#link-to 'expenses.new'}}+ New{{/link-to}}</li>
+        <li>{{#link-to 'expenses'}}List Expenses{{/link-to}}</li>
+      </ul>
+    </aside>
+
+    <section class="main-section">
+        {{outlet}}
+    </section>
+
+  </div>
+</div>

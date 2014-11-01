@@ -1,0 +1,33 @@
+<form>
+    <fieldset>
+    <legend>New Expense</legend>
+        <div class="row">
+            <div class="large-12 columns">
+                <label>Title</label>
+                {{input type="text" value=model.title}}
+            </div>
+            <div class="large-12 columns">
+                <div class="row collapse">
+                    <label>Amount</label>
+                    <div class="small-9 columns">
+                        {{input type="number" value=model.amount}}
+                    </div>
+                    <div class="small-3 columns">
+                        <span class="postfix"> €</span>
+                    </div>
+                </div>
+            </div>
+{{!--             <div class="large-12 columns">
+                <label>Category</label>
+                {{input type="text" value=model.category}}
+            </div> --}}
+            <div class="large-12 columns">
+                <label>Date</label>
+                {{input-date date=model.date}}
+            </div>
+        </div>
+        <div class="row"><div class="large-12 columns">
+            <button class="button" {{action 'save'}}>Save</button>
+        </div></div>
+    </fieldset>
+</form>
